@@ -15,3 +15,7 @@
 
 本项目前后端完全开源，其中app.py为后端，使用flask作为框架，visitor_statistoc.js为前端。  
 如对本项目有兴趣，欢迎通过pull request为本项目贡献代码。
+
+演示地址：https://st.api.bnnet.com.cn/release/demo
+
+数据千万条，保密第一条。机密忘记删，跑路两行泪。
