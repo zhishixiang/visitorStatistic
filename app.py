@@ -19,6 +19,8 @@ def getVisitorData():
   cursor = db.cursor()
   isVisited = cursor.execute("SELECT uuid FROM access WHERE uuid=%s AND domain=%s",(uuid,domain))
   visitorNum = cursor.execute("SELECT domain FROM access WHERE domain=%s",domain)
+  if "sqlmap" in ua:
+    return "个人小项目，运营不易请体谅，感谢您的配合"
   if isVisited == 0:
     cursor.execute("INSERT INTO `access` (`domain`, `id`, `ip`, `ua`, `uuid`) VALUES (%s,%s,%s,%s,%s)",(domain,str(visitorNum+1),ip,ua,uuid))
     res = make_response(str(visitorNum+1))
