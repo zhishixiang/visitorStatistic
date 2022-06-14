@@ -10,7 +10,7 @@
 ```
 <p>Bingo!您是本站第<span id="visitorId">0</span>个访客</p><br />
 <p>截至目前本页面已经被打开过<span id="sum">0</span>次</p>
-<script src="visitor_statistic.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/zhishixiang/visitorStatistic/visitor_statistic.js"></script>
 ```
 
 本项目前后端完全开源，其中app.py为后端，使用flask作为框架，visitor_statistoc.js为前端。  
