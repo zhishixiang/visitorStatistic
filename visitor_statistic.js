@@ -48,6 +48,6 @@ function getWebsiteData(domain)
 	}
 }
 console.log(getCookie("uuid"));
-console.log(document.domain);
-getVisitorData(getCookie("uuid"),document.domain);
-getWebsiteData(document.domain);
+console.log(location.host);
+getVisitorData(getCookie("uuid"),location.host);
+getWebsiteData(location.host);
