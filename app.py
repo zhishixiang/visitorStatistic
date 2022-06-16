@@ -22,10 +22,13 @@ def getVisitorData():
   if "sqlmap" in ua:
     cursor.close()
     return "个人小项目，运营不易请体谅，感谢您的配合"
-  if "python" in ua:
+  elif "python" in ua:
     cursor.close()
     return "请使用/getWebsiteData接口查询网站数据数据库"
-  if isVisited == 0:
+  elif "spider" in ua or "bot" in ua:
+    cursor.close()
+    return "机器人访问，不计入总数据"
+  elif isVisited == 0:
     cursor.execute("INSERT INTO `access` (`domain`, `id`, `ip`, `ua`, `uuid`) VALUES (%s,%s,%s,%s,%s)",(domain,str(visitorNum+1),ip,ua,uuid))
     res = make_response(str(visitorNum+1))
   else:
